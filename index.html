@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>支付页面</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/zfym.css"/>
+
+	</head>
+	<body>
+		<div class="container first">
+			<p class="title">订单信息</p>
+		</div>
+		<div class="container second">
+			<div class="row">
+				<div class="left">
+					<ul>
+						<li>
+							<p><span>订单编号：</span><span>993932</span></p>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p><span>订单时间：</span><span>2016.01.02</span></p>
+							<div class="clear"></div>
+
+						</li>
+						<li>
+							<p><span>交付金额：</span><span class="yellow">￥1000.00</span></p>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p><span>运费：</span><span class="yellow">￥10.00</span></p>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p><span>支付方式：</span><span>商誉宝</span></p>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p><span>支付状态：</span><span>待支付</span></p>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p><span>收货人：</span><span>张三三</span></p>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p><span>收货人电话：</span><span>188****0020</span></p>
+							<div class="clear"></div>
+						</li>
+						<li>
+							<p><span>收货人地址：</span><span>北京市朝阳区大望路</span></p>
+							<div class="clear"></div>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<ul>
+						<li>
+							<p>
+								还款日：<a class="hkr"  id="data1" href="javascript:void(0)">2017.06.25</a> <a class="hkr" href="javascript:void(0)">2017.07.25</a> <a class="hkr" href="javascript:void(0)">2017.08.25</a>
+							</p>
+						</li>
+						<li class="secondFloor">
+							<p><span class="red">*</span>在您选择的还款期限内，支持随借随还</p>
+						</li>
+						<li class="hide1">
+							<p>预计利息：<span class="yellow">￥10.00</span></p>
+						</li>
+						<li class="hide1">
+							<p>预计还款金额：<span class="yellow">￥10.00</span></p>
+						</li>
+
+						<li>
+							<input type="text" class="phoneCode" placeholder="校验码是六位数字"/>
+							<a href="" class="resiveCode">获取验证码</a>
+						</li>
+						<li>
+							<p><img src="img/see.png" alt="" />预览<a href="">《四方合同》</a></p>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="pay" onclick="addTip()">支付</a>
+							<a href="javascript:history.back(-1)" class="return">返回</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		var num = 0;
+		var sum = 0;
+		$('.hkr').on('click',function(){
+			if(num==0){
+				console.log(123);
+				doo();
+				num++
+			}
+			$('.active').removeClass('active')
+			$(this).addClass('active')
+			console.log(123123);
+			$('.hide1').show();
+		})
+		$('.phoneCode').on('blur',function(){
+			var str = $(this).val()
+			if(str == ""){
+
+			}
+			else if(str.length != 6){
+
+			}
+		})
+	function addTip(){
+		var num1 = 0
+		$(".active").each(function(){
+		   num1++
+		 });
+		 if(num == 0){
+			doo1();
+		 }
+		 else{
+			alert('要跳转了')
+		 }
+	}
+
+
+	function doo() {
+	    $('body').append('<div class="backg"></div>')
+	    $('.backg').append('<div class="backg1"></div>')
+	    $('body').append('<div class="backg2"></div>')
+	    $('.backg').append('<img class="img1" src="img/words.png"/>')
+	    $('.backg').append('<button class="butt">我知道了</button>')
+	    var data = {
+			width:($('#data1').width()+20) * 3 + 25,
+			height:$('#data1').height()+28,
+	        left: $('#data1').offset().left,
+	        top: $('#data1').offset().top,
+	    }
+	    $('.backg').css({
+	        "background": "rgba(0,0,0,0.5)",
+	        "width": "100%",
+	        "height": "100%",
+	        "position": "absolute",
+	        "top": "0",
+			"left":'0',
+	        "z-index": "400",
+	        "text-align": "center"
+	    })
+	    $('.backg1').css({
+	        "background": "rgba(255,255,255,1)",
+	        "width": data.width,
+	        "height": data.height,
+	        "position": "absolute",
+	        "left": data.left,
+	        "top": data.top,
+	        "z-index": "401"
+	    })
+	    $('.backg2').css({
+	        "background": "rgba(0,0,0,0)",
+			"width": data.width,
+	        "height": data.height,
+			"position": "absolute",
+			"left": data.left,
+			"top": data.top,
+	        "z-index": "500"
+	    })
+	    $('.hkr').css({
+	        "position": "relative",
+	        "z-index": "402"
+	    })
+	    $('.img1').css({
+			"position": "absolute",
+			"left": data.left - 380,
+			"top": data.top + data.height,
+	        "z-index": "500"
+	    })
+	    $('.img2').css({
+	        "position": "absolute",
+	        "left": data.left,
+	        "top": data.top + 100,
+	    })
+	    $('.butt').css({
+	        "background": "#14a7e4",
+	        "color": "#fff",
+	        "border-style": "none",
+	        "padding": "8px 26px",
+	        "border-radius": "4px",
+	        "position": "relative",
+			"top": data.top + 230,
+			"z-index":'999'
+	    })
+	    $('.butt').click(function() {
+	        $('.backg').remove();
+	        console.log(1)
+	        $('.backg2').remove();
+	    })
+
+}
+function doo1() {
+	$('body').append('<div class="backg"></div>')
+	$('.backg').append('<div class="backg1"></div>')
+	$('body').append('<div class="backg2"></div>')
+	$('.backg').append('<img class="img1" src="img/tips.png"/>')
+	$('.backg').append('<button class="butt">我知道了</button>')
+	var data = {
+		width:($('#data1').width()+20) * 3 + 25,
+		height:$('#data1').height()+28,
+		left: $('#data1').offset().left,
+		top: $('#data1').offset().top,
+	}
+	$('.backg').css({
+		"background": "rgba(0,0,0,0.5)",
+		"width": "100%",
+		"height": "100%",
+		"position": "absolute",
+		"top": "0",
+		"left":'0',
+		"z-index": "400",
+		"text-align": "center"
+	})
+	$('.backg1').css({
+		"background": "rgba(255,255,255,1)",
+		"width": data.width,
+		"height": data.height,
+		"position": "absolute",
+		"left": data.left,
+		"top": data.top,
+		"z-index": "401"
+	})
+	$('.backg2').css({
+		"background": "rgba(0,0,0,0)",
+		"width": data.width,
+		"height": data.height,
+		"position": "absolute",
+		"left": data.left,
+		"top": data.top,
+		"z-index": "500"
+	})
+	$('.hkr').css({
+		"position": "relative",
+		"z-index": "402"
+	})
+	$('.img1').css({
+		"position": "absolute",
+		"left": data.left - 380,
+		"top": data.top + data.height,
+		"z-index": "500"
+	})
+	$('.img2').css({
+		"position": "absolute",
+		"left": data.left,
+		"top": data.top + 100,
+	})
+	$('.butt').css({
+		"background": "#14a7e4",
+		"color": "#fff",
+		"border-style": "none",
+		"padding": "8px 26px",
+		"border-radius": "4px",
+		"position": "relative",
+		"top": data.top +150,
+		"left":"-50px",
+		"z-index":'999'
+	})
+	$('.butt').click(function() {
+		$('.backg').remove();
+		console.log(1)
+		$('.backg2').remove();
+	})
+
+}
+	</script>
+</html>

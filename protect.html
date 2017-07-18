@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>产品中心</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/prodect.css"/>
+	</head>
+	<body>
+		<header>
+			<div class="container header">
+				<img src="img/logo_black.png" alt="" />
+				<div>
+					<a class="active1 rege" href="">注册</a>
+					<a href="">登录</a>
+				</div>
+			</div>
+		</header>
+		<div class="firstFloor">
+			<div class="container">
+				<span class="title"><span>商誉宝</span>的介绍</span>
+				<a class="skip" href="">立即注册></a>
+				<div class="row">
+					<div class="col-lg-6 computer">
+						<img src="img/computer.png"/>
+					</div>
+					<div class="col-lg-6 show">
+						<p>电商用户需采购产品，资金不足或不愿以自有资金支付时，可选择申请注册<span>鸿途云赊账</span>，
+							提交简单的主体信息，经快速审核后给予相应的授信额度，用户即可在线赊账，
+							先采购后还款，缓解资金压力，解决采购支付难题。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="secondFloor">
+			<div class="container">
+				<span class="title"><span>商誉宝</span>的介绍</span>
+				<a class="skip" href="">立即注册></a>
+				<div class="row step1">
+					<div class="circle" style="margin-left: 20px;">
+						<div class="step">
+							<img src="img/1.png" alt="" />
+						</div>
+						<p>在线申请</p>
+					</div>
+					<div class="line">
+						<img src="img/line.png" alt="" />
+					</div>
+					<div class="circle">
+						<div class="step">
+							<img src="img/2.png" alt="" />
+						</div>
+						<p>审批授信</p>
+					</div>
+					<div class="line">
+						<img src="img/line.png" alt="" />
+					</div>
+					<div class="circle">
+						<div class="step">
+							<img src="img/3.png" alt="" />
+						</div>
+						<p>获得额度</p>
+					</div>
+					<div class="line">
+						<img src="img/line.png" alt="" />
+					</div>
+					<div class="circle">
+						<div class="step">
+							<img src="img/4.png" alt="" />
+						</div>
+						<p>订单支付</p>
+					</div>
+					<div class="line">
+						<img src="img/line.png" alt="" />
+					</div>
+					<div class="circle">
+						<div class="step">
+							<img src="img/5.png" alt="" />
+						</div>
+						<p>按时还款</p>
+					</div>
+					<div class="line">
+						<img src="img/line.png" alt="" />
+					</div>
+					<div class="circle">
+						<div class="step">
+							<img src="img/6.png" alt="" />
+						</div>
+						<p>循环使用</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="thirdFloor">
+			<div class="container">
+				<p class="thirdTitle">注册须知</p>
+				<p>*注册需要提交简单的企业资料，建议提前做好证件准备。</p>
+				<ul class="thirdUl">
+					<li>
+						所需企业证件包括：营业执照、税务登记证、组织机构代码、开户银行许可证、法人身份证复印件
+					</li>
+					<li>
+						注册时企业类型分为五证、三证、个体，选择的企业类型不同，需要以图片形式上传的资料也不同。
+					</li>
+				</ul>
+				<p>*需要以图片形式上传的资料：</p>
+				<ul class="thirdUl">
+					<li>
+						图片大小不超过1M
+					</li>
+					<li>
+						五证企业：需上传五个证件及企业授权书的复印件并全要加盖公章
+					</li>
+					<li>
+						三证企业：需上传营业执照（三证合一）、开户行许可证、法人身份证三个证件及企业授权书的复印件并加盖公章
+					</li>
+					<li>
+						个体企业：需上传营业执照和法人身份证两个证件及企业授权书的复印件并加盖公章
+					</li>
+				</ul>
+				<p class="thirdTitle">
+					温馨提示
+				</p>
+				<p class="sq">
+					授权书需要企业自行下载（ <a href="">授权书模版.doc</a> ）,信息填写完整后加盖公章，以图片形式上传。
+				</p>
+				<p class="sq">
+					需上传的相关资料复印件，一定要加盖公章，不然将会影响企业的审核授信。
+				</p>
+				<p class="regest1">
+					<a href="" class="regest">立即注册</a>
+				</p>
+			</div>
+		</div>
+		<footer>
+			<p>唯一服务热线：010-57128089</p>
+			<p>商誉宝版本所有权：copyright@2016国商商誉 <span>京ICP备1604582</span></p>
+		</footer>
+	</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$('.header div a').hover(function(){
+			$('.active1').removeClass('active1')
+			$(this).addClass('active1')
+		},function(){
+			$(this).removeClass('active1')
+			$('.rege').addClass('active1')
+		})
+	</script>
+</html>
