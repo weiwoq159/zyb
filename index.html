@@ -5,7 +5,23 @@
 		<title>支付页面</title>
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/zfym.css"/>
-
+		<style>
+			footer{
+				width:100%;
+				background: #3a3f51;
+				padding:20px 0px
+			}
+			footer p{
+				text-align: center;
+				color: #fff;
+			}
+			footer p:nth-child(1){
+				margin-bottom: 15px;
+			}
+			footer p:nth-child(1) span{
+				font-size:20px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="container first">
@@ -86,6 +102,10 @@
 				</div>
 			</div>
 		</div>
+	<footer>
+		<p>唯一服务热线：<span>0571-86164820</span></p>
+		<p>信佘宝版本所有权：copyright@2016国商商誉 <span>京ICP备 1604582</span></p>
+	</footer>
 	</body>
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript">
@@ -209,6 +229,7 @@ function doo1() {
 		left: $('#data1').offset().left,
 		top: $('#data1').offset().top,
 	}
+	
 	$('.backg').css({
 		"background": "rgba(0,0,0,0.5)",
 		"width": "100%",
